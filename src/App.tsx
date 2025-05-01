@@ -172,7 +172,7 @@ export default function App() {
   return (
     <div
       className="min-h-screen w-full bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: 'url("/college-bg.jpg")' }}
+      style={{ backgroundImage: 'url("public/college-bg.jpg")' }}
     >
       <div className="backdrop-blur-sm bg-white/90 sm:max-w-xl w-full p-8 rounded-3xl shadow-2xl flex flex-col items-center lift-card border border-zinc-200 relative">
         <img
@@ -207,12 +207,12 @@ export default function App() {
             <label className="block font-medium mb-1">Semester</label>
             <input
               type="number"
-              min={0}
+              min={1}
               max={12}
               className="w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2"
               style={{ borderColor: accentColor, outlineColor: accentColor }}
               value={semester}
-              onChange={e => setSemester(Number.parseInt(e.target.value) || 1)}
+              onChange={e => setSemester(Number.parseInt(e.target.value) || 0)}
             />
           </div>
         </div>
@@ -222,10 +222,10 @@ export default function App() {
             Number of Subjects:
             <input
               type="number"
-              min={0}
+              min={1}
               max={12}
               value={numSubjects}
-              onChange={e => setNumSubjects(Number.parseInt(e.target.value) || 1)}
+              onChange={e => setNumSubjects(Number.parseInt(e.target.value) || 0)}
               className="ml-2 w-16 rounded-md border px-2 py-1 focus:outline-none focus:ring-2"
               style={{ borderColor: accentColor, outlineColor: accentColor }}
             />
