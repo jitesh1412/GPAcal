@@ -70,8 +70,8 @@ type SemesterInfo = {
 
 export default function App() {
   const [branch, setBranch] = useState("");
-  const [semester, setSemester] = useState(1);
-  const [numSubjects, setNumSubjects] = useState(6);
+  const [semester, setSemester] = useState(0);
+  const [numSubjects, setNumSubjects] = useState(0);
   const [subjects, setSubjects] = useState(
     Array.from({ length: 6 }, () => ({ code: "", grade: "A+", credits: 3 }))
   );
