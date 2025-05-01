@@ -176,7 +176,7 @@ export default function App() {
     >
       <div className="backdrop-blur-sm bg-white/90 sm:max-w-xl w-full p-8 rounded-3xl shadow-2xl flex flex-col items-center lift-card border border-zinc-200 relative">
         <img
-          src="/college-logo.png"
+          src="public/college-logo.png"
           alt="RVR & JC College Logo"
           className="w-24 h-24 mb-2 drop-shadow-lg rounded-full border-4 border-white -mt-24 bg-white"
           style={{ position: 'absolute', top: '-3.5rem', left: '50%', transform: 'translateX(-50%)' }}
@@ -207,7 +207,7 @@ export default function App() {
             <label className="block font-medium mb-1">Semester</label>
             <input
               type="number"
-              min={1}
+              min={0}
               max={12}
               className="w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2"
               style={{ borderColor: accentColor, outlineColor: accentColor }}
@@ -222,7 +222,7 @@ export default function App() {
             Number of Subjects:
             <input
               type="number"
-              min={1}
+              min={0}
               max={12}
               value={numSubjects}
               onChange={e => setNumSubjects(Number.parseInt(e.target.value) || 1)}
