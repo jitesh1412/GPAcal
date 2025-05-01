@@ -170,7 +170,7 @@ export default function App() {
   }
 
   return (
-    <div
+    /*<div
       className="min-h-screen w-full bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: 'url("public/college-bg.jpg")' }}
     >
@@ -180,7 +180,7 @@ export default function App() {
           alt="RVR & JC College Logo"
           className="w-24 h-24 mb-2 drop-shadow-lg rounded-full border-4 border-white -mt-24 bg-white"
           style={{ position: 'absolute', top: '-3.5rem', left: '50%', transform: 'translateX(-50%)' }}
-        />
+        />*/
         <h1 className="text-3xl font-bold text-center mt-20 mb-2" style={{ color: accentColor }}>
           R.V.R. & J.C. College of Engineering
         </h1>
