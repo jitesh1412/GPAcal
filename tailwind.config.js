@@ -32,6 +32,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))'
         },
+        backgroundImage:{
+            'bg':"url('college-bg.jpg')",
+        }
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))'
