@@ -68,6 +68,7 @@ body {
     @apply border-border;
   }
   body {
+    background-image: url(/src/college-bg.jpg);
     @apply bg-background text-foreground;
   }
 }
