@@ -170,11 +170,11 @@ export default function App() {
   }
 
   return (
-    {/*<div
+    <div
       className="min-h-screen w-full bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: 'url("/college-bg.jpg")' }}
     >
-      <div className="backdrop-blur-sm bg-white/90 sm:max-w-xl w-full p-8 rounded-3xl shadow-2xl flex flex-col items-center lift-card border border-zinc-200 relative">
+      {/* <div className="backdrop-blur-sm bg-white/90 sm:max-w-xl w-full p-8 rounded-3xl shadow-2xl flex flex-col items-center lift-card border border-zinc-200 relative">
         <img
           src="/college-logo.png"
           alt="RVR & JC College Logo"
