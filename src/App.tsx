@@ -279,9 +279,14 @@ export default function App() {
                   style={{ borderColor: accentColor, outlineColor: accentColor }}
                   value={subj.credits}
                   onChange={e => {
-                    const next = [...subjects];
-                    next[idx].credits = Number.parseFloat(e.target.value) || 0;
-                    setSubjects(next);
+                    const value = e.target.value;
+                    setSubjects(prev => {
+                      const next = [...prev];
+                      next[idx] = { ...next[idx], code: value }; // Ensure entire string is stored
+                      return next;
+                   // next[idx].credits = Number.parseFloat(e.target.value) || 0;
+                   // setSubjects(next);
+                    });
                   }}
                 />
               </div>
