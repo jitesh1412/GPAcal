@@ -175,12 +175,12 @@ export default function App() {
       style={{ backgroundImage: 'url("/college-bg.jpg")' }}
     >
       <div className="backdrop-blur-sm bg-white/90 sm:max-w-xl w-full p-8 rounded-3xl shadow-2xl flex flex-col items-center lift-card border border-zinc-200 relative">
-        {/*<img
+        <img
           src="/college-logo.png"
           alt="RVR & JC College Logo"
           className="w-24 h-24 mb-2 drop-shadow-lg rounded-full border-4 border-white -mt-24 bg-white"
           style={{ position: 'absolute', top: '-3.5rem', left: '50%', transform: 'translateX(-50%)' }}
-        />*/}
+        />
         <h1 className="text-3xl font-bold text-center mt-20 mb-2" style={{ color: accentColor }}>
           R.V.R. & J.C. College of Engineering
         </h1>
