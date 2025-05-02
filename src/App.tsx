@@ -246,9 +246,12 @@ export default function App() {
                   style={{ borderColor: accentColor, outlineColor: accentColor }}
                   value={subj.code}
                   onChange={e => {
-                    const next = [...subjects];
-                    next[idx] = { ...next[idx], code: e.target.value };
-                    setSubjects(next);
+                    const value = e.target.value; // Get the full input value
+                    setSubjects(prev => {
+                      const next = [...prev];
+                      next[idx] = { ...next[idx], code: value }; // Ensure entire string is stored
+                      return next;
+                    });
                   }}
                   placeholder="e.g. MA101"
                 />
@@ -278,15 +281,10 @@ export default function App() {
                   className="w-full rounded border px-2 py-1"
                   style={{ borderColor: accentColor, outlineColor: accentColor }}
                   value={subj.credits}
-                  onChange={e => {
-                    const value = e.target.value;
-                    setSubjects(prev => {
-                      const next = [...prev];
-                      next[idx] = { ...next[idx], code: value }; // Ensure entire string is stored
-                      return next;
-                   // next[idx].credits = Number.parseFloat(e.target.value) || 0;
-                   // setSubjects(next);
-                    });
+                 onChange={e => {
+                    const next = [...subjects];
+                    next[idx].credits = Number.parseFloat(e.target.value) || 0;
+                    setSubjects(next);
                   }}
                 />
               </div>
