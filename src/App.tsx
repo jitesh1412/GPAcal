@@ -247,7 +247,7 @@ export default function App() {
                   value={subj.code}
                   onChange={e => {
                     const next = [...subjects];
-                    next[idx].code = e.target.value;
+                    next[idx]={ ...next[idx], code: e.target.value; };
                     setSubjects(next);
                   }}
                   placeholder="e.g. MA101"
