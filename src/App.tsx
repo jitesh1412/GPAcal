@@ -238,7 +238,7 @@ export default function App() {
             <div className="col-span-4">Credits</div>
           </div>
           {subjects.map((subj, idx) => (
-            <div key={subj.code + idx} className="grid grid-cols-12 gap-2 mb-1">
+            <div key={idx} className="grid grid-cols-12 gap-2 mb-1">
               <div className="col-span-4">
                 <input
                   type="text"
