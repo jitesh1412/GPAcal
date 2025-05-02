@@ -245,14 +245,12 @@ export default function App() {
                   className="w-full rounded border px-2 py-1"
                   style={{ borderColor: accentColor, outlineColor: accentColor }}
                   value={subj.code}
-                  onChange={e => {
-                    const value = e.target.value; // Get the full input value
-                    setSubjects(prev => {
-                      const next = [...prev];
-                      next[idx] = { ...next[idx], code: value }; // Ensure entire string is stored
-                      return next;
-                    });
-                  }}
+                  onChange={e => setSubjects(prev => {
+                    const next = [...prev];
+                    next[idx] = { ...next[idx], code: e.target.value };
+                    return next;
+                  })}
+                  onBlur={() => console.log("Final input:", subj.code)} // Trigger only when user exits the input field
                   placeholder="e.g. MA101"
                 />
               </div>
