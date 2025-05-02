@@ -238,22 +238,27 @@ export default function App() {
             <div className="col-span-4">Credits</div>
           </div>
           {subjects.map((subj, idx) => (
-            <div key={subj.code + idx} className="grid grid-cols-12 gap-2 mb-1">
-              <div className="col-span-4">
-                <input
-                  type="text"
-                  className="w-full rounded border px-2 py-1"
-                  style={{ borderColor: accentColor, outlineColor: accentColor }}
-                  value={subj.code}
-                  onChange={e => setSubjects(prev => {
-                    const next = [...prev];
-                    next[idx] = { ...next[idx], code: e.target.value };
-                    return next;
-                  })}
-                  onBlur={() => console.log("Final input:", subj.code)} // Trigger only when user exits the input field
-                  placeholder="e.g. MA101"
-                />
+              <div key={subj.code + idx} className="grid grid-cols-12 gap-2 mb-1">
+                <div className="col-span-4">
+                  <input
+                    type="text"
+                    className="w-full rounded border px-2 py-1"
+                    style={{ borderColor: accentColor, outlineColor: accentColor }}
+                    value={subj.code}
+                    onChange={e => {
+                      const newValue = e.target.value; // Ensure full text input is captured
+                      setSubjects(prev => {
+                        const next = [...prev];
+                        next[idx] = { ...next[idx], code: newValue }; 
+                        return next;
+                      });
+                    }}
+                    onBlur={() => console.log("Final input:", subj.code)}
+                    placeholder="e.g. MA101"
+                  />
+                </div>
               </div>
+            ))
               <div className="col-span-4">
                 <select
                   className="w-full rounded border px-2 py-1"
