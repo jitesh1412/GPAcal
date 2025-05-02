@@ -246,10 +246,14 @@ export default function App() {
                   style={{ borderColor: accentColor, outlineColor: accentColor }}
                   value={subj.code}
                   onChange={e => {
-                    const next = [...subjects];
-                    next[idx].code = e.target.value;
-                    setSubjects(next);
+                    const newValue = e.target.value; // Ensure full text input is captured
+                    setSubjects(prev => {
+                      const next = [...prev];
+                      next[idx] = { ...next[idx], code: newValue }; 
+                      return next;
+                    });
                   }}
+                  onBlur={() => console.log("Final input:", subj.code)}
                   placeholder="e.g. MA101"
                 />
               </div>
