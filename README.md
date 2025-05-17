@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+🎓 CGPA & SGPA Calculator
+A responsive web app that helps students calculate their SGPA and CGPA easily by entering semester-wise marks and credits. Built using TypeScript, HTML, and CSS, the app provides an intuitive interface, form validation, and visual results.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Live Demo: gpa-cal-6c98.vercel.app
 
-Currently, two official plugins are available:
+🚀 Features
+📥 Input marks and credits per subject
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📊 Automatic SGPA & CGPA calculation
 
-## Expanding the ESLint configuration
+✅ Real-time form validation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+📱 Fully responsive for mobile and desktop
 
-- Configure the top-level `parserOptions` property like this:
+🎨 Clean and user-friendly UI
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+🛠 Tech Stack
+Frontend: HTML, CSS, TypeScript
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Hosting: Vercel
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
